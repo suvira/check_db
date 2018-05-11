@@ -97,6 +97,7 @@ public class NewJFrame extends javax.swing.JFrame {
             rs.close();
             st.close();
             conn.close();
+            
         } catch (SQLException ex) {
            System.out.println("Connect failed ! ");
         }
