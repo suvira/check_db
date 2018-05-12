@@ -186,12 +186,12 @@ public class NewJFrame extends javax.swing.JFrame {
         //ConnectionURL, username and password should be specified in getConnection()
         try {
             Connection conn = DriverManager.getConnection(connectionURL, "app", "nbuser");
-            String sql = "SELECT * FROM demo";
+            String sql = "SELECT * FROM appointment";
             Statement st = conn.createStatement();
             ResultSet rs=null;
             rs=st.executeQuery(sql);
             while(rs.next()){
-                System.out.println(rs.getInt("id")+"\t"+rs.getString("name"));
+                System.out.println(rs.getString("name")+"\t"+rs.getString("number")+"\t"+rs.getString("time_slot")+"\t"+rs.getString("reason"));
             }
             rs.close();
             st.close();
