@@ -161,6 +161,7 @@ public class NewJFrame extends javax.swing.JFrame {
         } catch (SQLException ex) {
             System.out.println("Connect failed ! ");
         }*/
+        
         String Name=jTextField2.getText().trim();
         boolean name_match=Name.matches("[a-zA-Z .]+");
         
